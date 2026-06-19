@@ -140,7 +140,17 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-1">
             <div className="gold-divider w-12" />
-            <span className="luxury-label text-[0.6rem] px-3">Crafted with Excellence</span>
+            <span className="luxury-label text-[0.6rem] px-3">
+              Designed &amp; Developed by{" "}
+              <a
+                href="https://hassanrazadev.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold-DEFAULT hover:text-gold-light transition-colors duration-300"
+              >
+                Hassan Raza
+              </a>
+            </span>
             <div className="gold-divider w-12" />
           </div>
           <div className="flex gap-6">
