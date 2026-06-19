@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 11 11 11;
+    --foreground: 255 255 255;
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #0B0B0B;
+    color: #FFFFFF;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(200, 164, 93, 0.3);
+    color: #C8A45D;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0B0B0B;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C8A45D;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D4B878;
+  }
+}
+
+@layer components {
+  .gold-text {
+    color: #C8A45D;
+  }
+
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #C8A45D 0%, #D4B878 50%, #A8843D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .luxury-border {
+    border: 1px solid rgba(200, 164, 93, 0.2);
+  }
+
+  .glass-card {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(200, 164, 93, 0.15);
+  }
+
+  .gold-divider {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #C8A45D, transparent);
+    margin: 0 auto;
+  }
+
+  .section-padding {
+    padding: 100px 0;
+  }
+
+  .container-luxury {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .btn-gold {
+    background: linear-gradient(135deg, #C8A45D 0%, #D4B878 50%, #A8843D 100%);
+    color: #0B0B0B;
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding: 14px 36px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .btn-gold:hover {
+    box-shadow: 0 0 30px rgba(200, 164, 93, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline-gold {
+    background: transparent;
+    color: #C8A45D;
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding: 13px 35px;
+    border: 1px solid rgba(200, 164, 93, 0.6);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline-gold:hover {
+    background: rgba(200, 164, 93, 0.1);
+    border-color: #C8A45D;
+    box-shadow: 0 0 20px rgba(200, 164, 93, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .heading-xl {
+    font-family: var(--font-playfair), Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .heading-lg {
+    font-family: var(--font-playfair), Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .heading-md {
+    font-family: var(--font-playfair), Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .luxury-label {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #C8A45D;
+  }
+
+  .card-hover {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-700 { animation-delay: 700ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
+}
